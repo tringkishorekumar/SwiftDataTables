@@ -398,6 +398,8 @@ extension SwiftDataTable: UICollectionViewDataSource, UICollectionViewDelegate {
         switch kind {
         case .paginationHeader:
             view.backgroundColor = UIColor.darkGray
+        case .columnHeader:
+            break
         default:
             view.backgroundColor = UIColor.white
         }
@@ -410,6 +412,10 @@ extension SwiftDataTable: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         else {
             cell.contentView.backgroundColor = delegate?.dataTable?(self, unhighlightedColorForRowIndex: indexPath.item) ?? self.options.unhighlightedAlternatingRowColors[indexPath.section % self.options.unhighlightedAlternatingRowColors.count]
+        }
+        
+        if let dataCell =  cell as? DataCell {
+            dataCell.updateUI(textColor: options.cellTextColor)
         }
     }
     

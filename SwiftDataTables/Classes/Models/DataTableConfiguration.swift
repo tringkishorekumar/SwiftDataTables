@@ -35,7 +35,7 @@ public struct DataTableConfiguration: Equatable {
     public var shouldShowVerticalScrollBars: Bool = true
     public var shouldShowHorizontalScrollBars: Bool = false
 
-    public var sortArrowTintColor: UIColor = UIColor.blue
+    public var sortArrowTintColor: UIColor = UIColor.black
     
     public var shouldSupportRightToLeftInterfaceDirection: Bool = true
     
@@ -47,6 +47,18 @@ public struct DataTableConfiguration: Equatable {
         UIColor(red: 0.9725, green: 0.9725, blue: 0.9725, alpha: 1),
         .white
     ]
+    
+    public var cellTextColor = UIColor.black
+    
+    public var headerBackgroundColor = UIColor.white
+    
+    public var selectedHeaderBackgroundColor = UIColor.blue
+    
+    public var headerTextColor = UIColor.black
+    
+    public var selectedHeaderTextColor = UIColor.black
+    
+    public var cellSeparatorColor = UIColor.gray
     
     public var fixedColumns: DataTableFixedColumnType? = nil
     

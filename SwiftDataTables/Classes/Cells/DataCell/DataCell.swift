@@ -45,4 +45,8 @@ class DataCell: UICollectionViewCell {
         self.dataLabel.text = viewModel.data.stringRepresentation
 //        self.contentView.backgroundColor = .white
     }
+    
+    func updateUI(textColor: UIColor) {
+        dataLabel.textColor = textColor
+    }
 }
