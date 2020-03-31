@@ -46,7 +46,8 @@ class DataCell: UICollectionViewCell {
 //        self.contentView.backgroundColor = .white
     }
     
-    func updateUI(textColor: UIColor) {
+    func updateUI(textColor: UIColor, font: UIFont) {
         dataLabel.textColor = textColor
+        dataLabel.font = font
     }
 }

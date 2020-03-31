@@ -415,7 +415,7 @@ extension SwiftDataTable: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         if let dataCell =  cell as? DataCell {
-            dataCell.updateUI(textColor: options.cellTextColor)
+            dataCell.updateUI(textColor: options.cellTextColor, font: options.cellFont)
         }
     }
     

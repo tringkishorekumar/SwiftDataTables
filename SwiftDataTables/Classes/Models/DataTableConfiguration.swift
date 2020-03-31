@@ -58,6 +58,10 @@ public struct DataTableConfiguration: Equatable {
     
     public var cellSeparatorColor = UIColor.gray
     
+    public var cellFont = UIFont.systemFont(ofSize: 14)
+    
+    public var headerFont = UIFont.systemFont(ofSize: 14)
+    
     public var fixedColumns: DataTableFixedColumnType? = nil
     
     public init(){

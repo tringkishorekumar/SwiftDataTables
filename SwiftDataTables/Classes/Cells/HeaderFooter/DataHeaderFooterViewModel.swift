@@ -63,6 +63,10 @@ public class DataHeaderFooterViewModel: DataTableSortable {
         }
         return (sortType != .unspecified) ? dataTable.options.selectedHeaderTextColor : dataTable.options.headerTextColor
     }
+    
+    var font: UIFont? {
+        return dataTable != nil ? dataTable.options.headerFont : UIFont.systemFont(ofSize: 14)
+    }
     //MARK: - Events
     
     //MARK: - Lifecycle

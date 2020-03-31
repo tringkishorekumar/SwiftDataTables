@@ -77,6 +77,7 @@ class DataHeaderFooter: UICollectionReusableView {
         self.backgroundColor = viewModel.backgroundColor
         self.titleLabel.textColor = viewModel.titleColor
         self.titleLabel.backgroundColor = .clear
+        self.titleLabel.font = viewModel.font
     }
     @objc func didTapView(){
         self.didTapEvent?()
