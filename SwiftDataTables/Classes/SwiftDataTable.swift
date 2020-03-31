@@ -70,7 +70,7 @@ public class SwiftDataTable: UIView {
             fatalError("The layout needs to be set first")
         }
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.backgroundColor = self.options.cellSeparatorColor
         collectionView.allowsMultipleSelection = true
         collectionView.dataSource = self
         collectionView.delegate = self
