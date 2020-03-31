@@ -14,15 +14,15 @@ import Foundation
 public enum DataTableValueType {
     
     //MARK: - Properties
-    case string(String)
+    case string(String, Any? = nil)
     case int(Int)
     case float(Float)
     case double(Double)
-    
+        
     public var stringRepresentation: String {
         get {
             switch self {
-            case .string(let value):
+            case .string(let value, _):
                 return String(value)
             case .int(let value):
                 return String(value)
@@ -67,7 +67,7 @@ extension DataTableValueType: Comparable {
     }
     public static func < (lhs: DataTableValueType, rhs: DataTableValueType) -> Bool {
         switch (lhs, rhs) {
-        case (.string(let lhsValue), .string(let rhsValue)):
+        case (.string(let lhsValue, _), .string(let rhsValue, _)):
             return lhsValue < rhsValue
         case (.int(let lhsValue), .int(let rhsValue)):
             return lhsValue < rhsValue
