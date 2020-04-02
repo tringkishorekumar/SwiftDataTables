@@ -46,9 +46,9 @@ class DataCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             separator.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1.0),
             separator.heightAnchor.constraint(equalToConstant: 1),
-            dataLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
-            dataLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
-            dataLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            separator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            separator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
         ])
     }
     
