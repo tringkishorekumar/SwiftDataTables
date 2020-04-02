@@ -12,12 +12,13 @@ class DataCell: UICollectionViewCell {
 
     //MARK: - Properties
     private enum Properties {
-        static let verticalMargin: CGFloat = 5
+        static let verticalMargin: CGFloat = 0
         static let horizontalMargin: CGFloat = 15
         static let widthConstant: CGFloat = 20
     }
     
     let dataLabel = UILabel()
+    let separator = UIView()
     
     //MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -39,6 +40,16 @@ class DataCell: UICollectionViewCell {
             dataLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Properties.horizontalMargin),
             dataLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Properties.horizontalMargin),
         ])
+        
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(separator)
+        NSLayoutConstraint.activate([
+            separator.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1.0),
+            separator.heightAnchor.constraint(equalToConstant: 1),
+            dataLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            dataLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            dataLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+        ])
     }
     
     func configure(_ viewModel: DataCellViewModel){
@@ -46,8 +57,9 @@ class DataCell: UICollectionViewCell {
 //        self.contentView.backgroundColor = .white
     }
     
-    func updateUI(textColor: UIColor, font: UIFont) {
+    func updateUI(textColor: UIColor, font: UIFont, separatorColor: UIColor) {
         dataLabel.textColor = textColor
         dataLabel.font = font
+        separator.backgroundColor = separatorColor
     }
 }
