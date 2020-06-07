@@ -29,3 +29,12 @@ extension UIScrollView {
         self.contentOffset = CGPoint(x: -contentInset.left, y: -contentInset.top)
     }
 }
+
+extension Formatter {
+    static let withSeparator: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = ","
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+}

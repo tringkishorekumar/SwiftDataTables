@@ -25,11 +25,11 @@ public enum DataTableValueType {
             case .string(let value, _):
                 return String(value)
             case .int(let value):
-                return String(value)
+                return Formatter.withSeparator.string(for: value) ?? ""
             case .float(let value):
-                return String(value)
+                return Formatter.withSeparator.string(for: value) ?? ""
             case .double(let value):
-                return String(value)
+                return Formatter.withSeparator.string(for: value) ?? ""
             }
         }
     }
